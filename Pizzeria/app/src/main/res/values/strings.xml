@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pizzeria</string>
+
+    <!--INICIO-->
+    <string name="strTvInicio">INICIO</string>
+    <string name="strBtnIniciarSesion">INICIAR SESIÓN</string>
+    <string name="strBtnRegistrarse">REGISTRARSE</string>
+
+    <!--REGISTRO-->
+    <string name="strTvRegistro">REGISTRO</string>
+    <string name="strHintUsuarioRegistro">Usuario</string>
+    <string name="strHintEmailRegistro">Email</string>
+    <string name="strHintPassRegistro">Contraseña</string>
+    <string name="strBtnRegistro">Guardar</string>
+
+    <!--LOGIN-->
+    <string name="strTvLogin">LOGIN</string>
+    <string name="strHintUsuarioLogin">Usuario</string>
+    <string name="strHintPassLogin">Contraseña</string>
+    <string name="strBtnLogin">SIGUIENTE</string>
+    <string name="strCheckLogin">Guardar usuario y contraseña</string>
+
+</resources>
