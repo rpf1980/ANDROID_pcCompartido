@@ -23,19 +23,22 @@ class Gui_Registro : AppCompatActivity()
         btnGuardar.setOnClickListener {
 
             // Guardamos datos en SharedPreferences
-            val sharedPref: SharedPreferences = getSharedPreferences(edtUsuario.text.toString()+".dataRegister", Context.MODE_PRIVATE)
+            val sharedPref: SharedPreferences = getSharedPreferences(edtUsuario.text.toString()+"dataRegister", Context.MODE_PRIVATE)
             val editor = sharedPref.edit()
-            editor.putString("Pref_Name: ", edtUsuario.text.toString())
-            editor.putString("Pref_Email: ", edtEmail.text.toString())
-            editor.putString("Pref_PassWord: ", edtPass.text.toString())
+            editor.putString("name", edtUsuario.text.toString())
+            editor.putString("email", edtEmail.text.toString())
+            editor.putString("password", edtPass.text.toString())
             editor.apply()
+
+            var datosUser = sharedPref.getString("email", "defautVALUE")
+            getToast(datosUser.toString())
         }
     }
 
     // Mensajes TOAST
     fun getToast(message: String)
     {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
 }

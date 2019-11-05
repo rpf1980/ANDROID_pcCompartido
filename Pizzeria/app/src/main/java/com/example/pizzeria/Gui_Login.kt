@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.Toast
 
 class Gui_Login : AppCompatActivity() {
 
@@ -19,22 +20,46 @@ class Gui_Login : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.idBtnLogin) as Button
         val checkingBox = findViewById<CheckBox>(R.id.idCheckLogin) as CheckBox
 
-
-
         // Evento del BOTÓN
+        btnLogin.setOnClickListener {
+            // Debemos comprobar que el usuario esté registrado ( SharedPreferences del Usuario en Registro )
+            val name = edtUsuario.text.toString()
+            val pass = edtPass.text.toString()
+            val nameFile = name+"dataRegister"
+
+            if(fileExist(nameFile))
+            {
+                getToast("Usuario existe...")
+            }
+        }
+
+        // Evento del CheckBox
         checkingBox.setOnClickListener {
 
             // Debemos comprobar que el usuario esté registrado ( SharedPreferences del Usuario en Registro )
+            val name = edtUsuario.text.toString()
+            val pass = edtPass.text.toString()
+            val nameFile = name+"dataRegister"
 
-            if(checkingBox.isChecked) // Si usuario hace click en CheckBox
+            if(fileExist(nameFile))
+            {
+                getToast("Usuario existe...")
+            }
+
+            /*if(checkingBox.isChecked) // Si usuario hace click en CheckBox
             {
                 // Guardamos los datos en un xml SharedPreferences
-                val sharedPref: SharedPreferences = getSharedPreferences(edtUsuario.text.toString() + ".dataLogin", Context.MODE_PRIVATE)
+                val sharedPref: SharedPreferences = getSharedPreferences(edtUsuario.text.toString() + "dataLogin", Context.MODE_PRIVATE)
                 val editor = sharedPref.edit()
 
-                editor.putString("Pref_Name: ", edtUsuario.text.toString())
-                editor.putString("Pref_Pass: ", edtPass.text.toString())
+                editor.putString("name", edtUsuario.text.toString())
+                editor.putString("password", edtPass.text.toString())
+
+                var datosUser = sharedPref.getString("name", "defautVALUE")
+                getToast(datosUser.toString())
             }
+*/
+
         }
     }
 
@@ -42,12 +67,22 @@ class Gui_Login : AppCompatActivity() {
     {
         var exist: Boolean = false;
 
-        //val sharedPref: SharedPreferences = getSharedPreferences()
+        val sharedPref: SharedPreferences = getSharedPreferences(file, Context.MODE_PRIVATE)
 
-        /*var datosUser = sharedPref.getString("Pref_Name: ", "defautVALUE")
-        var datosEmail = sharedPref.getString("Pref_Email: ", "defalutVALUE")
-        var datosPass = sharedPref.getString("Pref_PassWord: ", "defaultValue")
-*/
+        var datosUser = sharedPref.getString("name", "defautVALUE")
+        var datosEmail = sharedPref.getString("email", "defalutVALUE")
+        var datosPass = sharedPref.getString("password", "defaultValue")
+
+        if(!datosUser.toString().equals("defautVALUE") &&
+                !datosPass.toString().equals("defautVALUE"))
+        {
+            exist = true;
+        }
         return exist;
+    }
+
+    fun getToast(msg:String)
+    {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 }
