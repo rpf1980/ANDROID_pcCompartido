@@ -16,4 +16,10 @@
     <string name="strHintEmailRegistro">Email</string>
     <string name="strHintPassRegistro">Constraseña</string>
     <string name="strBtnRegistro">GUARDAR</string>
+    <!--PANEL OPCIONES-->
+    <string name="strWifi">Wifi </string>
+    <string name="strTvPanelOp">PANEL DE OPCIONES</string>
+    <string name="strBtnWeb">WEB</string>
+    <string name="strBtnPedido">PEDIDO</string>
+    <string name="strBtnConfig">CONFIGURACIÓN</string>
 </resources>

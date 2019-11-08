@@ -2,6 +2,7 @@ package com.example.pizzeria_v04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -73,6 +74,12 @@ public class GUI_REGISTRO extends AppCompatActivity
                     }
 
                     editor.commit();
+
+                    // Después del registro pasamos al PANEL DE OPCIONES
+                    Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
+                    startActivity(intent);
+
+                    getToast("Gracias por registrarte, "+usuario);
                 }
                 else
                 {

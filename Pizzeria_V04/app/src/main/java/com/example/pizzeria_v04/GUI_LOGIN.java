@@ -2,6 +2,7 @@ package com.example.pizzeria_v04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -51,7 +52,8 @@ public class GUI_LOGIN extends AppCompatActivity
                 // Comprobar que los datos estén en Registrados
                 if(usuario.equals(usu) && password.equals(pass))
                 {
-                    getToast("Usuario registrado");
+                    Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
+                    startActivity(intent);
                 }
                 else
                 {

@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".GUI_PANEL_OPCIONES">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/strTvPanelOp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/idWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/strWifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/strBtnWeb"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/idBtnPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/strBtnPedido"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnWeb"
+        app:layout_constraintStart_toStartOf="@+id/idBtnWeb"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnWeb" />
+
+    <Button
+        android:id="@+id/idBtnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/strBtnConfig"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnPedido"
+        app:layout_constraintStart_toStartOf="@+id/idBtnPedido"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnPedido" />
 </androidx.constraintlayout.widget.ConstraintLayout>
