@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GUI_LOGIN">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:text="@string/strTvLogin"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEdtUsuLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/strHintUsuarioLogin"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/idEdtPassLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/strHintPassLogin"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtUsuLogin"
+        app:layout_constraintStart_toStartOf="@+id/idEdtUsuLogin"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtUsuLogin" />
+
+    <Button
+        android:id="@+id/idBtnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/strBtnLogin"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtPassLogin"
+        app:layout_constraintStart_toStartOf="@+id/idEdtPassLogin"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtPassLogin" />
+
+    <CheckBox
+        android:id="@+id/idCheckLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/strCheckLogin"
+        app:layout_constraintStart_toStartOf="@+id/idEdtPassLogin"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
