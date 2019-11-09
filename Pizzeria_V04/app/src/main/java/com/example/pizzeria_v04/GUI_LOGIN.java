@@ -45,7 +45,7 @@ public class GUI_LOGIN extends AppCompatActivity
                 password = edtPassLogin.getText().toString();
 
                 // Leemos datos del SharedPreferences
-                SharedPreferences sp = getSharedPreferences("MARIAdata", MODE_PRIVATE);
+                SharedPreferences sp = getSharedPreferences(usuario+"data", MODE_PRIVATE);
                 String usu = sp.getString("usuario", "Error usuario");
                 String pass = sp.getString("pass", "Error contraseña");
 

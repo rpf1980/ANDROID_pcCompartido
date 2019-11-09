@@ -34,6 +34,7 @@ public class GUI_REGISTRO extends AppCompatActivity
         edtPassRegistro = findViewById(R.id.idEdtPassRegistro);
         btnRegistro = findViewById(R.id.idBtnRegistro);
 
+
         // Evento btn GUARDAR registro
         btnRegistro.setOnClickListener(new View.OnClickListener()
         {
@@ -45,9 +46,14 @@ public class GUI_REGISTRO extends AppCompatActivity
                 email = edtEmailRegistro.getText().toString();
                 pass = edtPassRegistro.getText().toString();
 
+                // Entero contador para controlar que el registro esté Ok
+                // Si todas las validaciones son correctas ( contador suma 3 )
+                // entonces damos paso al panel de opciones
+                int registroOk = 0;
+
                 if(camposIsEmpty(usuario, email, pass))
                 {
-                    getToast("Entramos no campos vacíos");
+                    registroOk += 1;
 
                     // Registramos en SharedPreferences
                     SharedPreferences sp = getSharedPreferences(usuario+"data", MODE_PRIVATE);
@@ -57,6 +63,7 @@ public class GUI_REGISTRO extends AppCompatActivity
 
                     if(validarEmail(email))
                     {
+                        registroOk += 1;
                         editor.putString("email", email);
                     }
                     else
@@ -66,6 +73,7 @@ public class GUI_REGISTRO extends AppCompatActivity
 
                     if(validarPassWord(pass))
                     {
+                        registroOk += 1;
                         editor.putString("pass", pass);
                     }
                     else
@@ -75,11 +83,15 @@ public class GUI_REGISTRO extends AppCompatActivity
 
                     editor.commit();
 
-                    // Después del registro pasamos al PANEL DE OPCIONES
-                    Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
-                    startActivity(intent);
+                    if(registroOk == 3)
+                    {
+                        // Después del registro pasamos al PANEL DE OPCIONES
+                        Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
+                        startActivity(intent);
 
-                    getToast("Gracias por registrarte, "+usuario);
+                        getToast("Gracias por registrarte, "+usuario);
+                    }
+
                 }
                 else
                 {
