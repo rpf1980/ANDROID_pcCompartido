@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GUI_OPCIONES_PEDIDO">
+
+    <Button
+        android:id="@+id/idBtnCasaPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="@string/strBtnDeLaCasa"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/strTvOpcionesPedido"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnEligeIngredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/strBtnEligeIngredientes"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnCasaPedido"
+        app:layout_constraintStart_toStartOf="@+id/idBtnCasaPedido"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnCasaPedido" />
+
+    <Button
+        android:id="@+id/idBtnFavoritaPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/strBtnFavorita"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnEligeIngredientes"
+        app:layout_constraintStart_toStartOf="@+id/idBtnEligeIngredientes"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnEligeIngredientes" />
+</androidx.constraintlayout.widget.ConstraintLayout>

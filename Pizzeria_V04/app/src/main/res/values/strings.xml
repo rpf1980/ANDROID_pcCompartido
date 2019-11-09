@@ -22,4 +22,9 @@
     <string name="strBtnWeb">WEB</string>
     <string name="strBtnPedido">PEDIDO</string>
     <string name="strBtnConfig">CONFIGURACIÓN</string>
+    <!--OPCIONES PEDIDO-->
+    <string name="strTvOpcionesPedido">OPCIONES PEDIDO</string>
+    <string name="strBtnDeLaCasa">de la casa...</string>
+    <string name="strBtnEligeIngredientes">elige tus ingredientes...</string>
+    <string name="strBtnFavorita">favorita</string>
 </resources>
