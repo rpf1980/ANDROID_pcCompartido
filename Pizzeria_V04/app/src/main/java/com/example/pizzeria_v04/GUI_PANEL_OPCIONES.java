@@ -39,5 +39,15 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        // Btn PEDIDO
+        btnPedido.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+            }
+        });
     }
 }
