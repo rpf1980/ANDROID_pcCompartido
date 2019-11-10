@@ -7,10 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class GUI_OPCIONES_PEDIDO extends AppCompatActivity
 {
-    Button btnDeLaCasa;
+    Button btnDeCasa;
     Button btnEligeIngredientes;
     Button btnFavoritaGuiOpcionesPedido;
 
@@ -20,16 +21,27 @@ public class GUI_OPCIONES_PEDIDO extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__opciones__pedido);
 
-        btnDeLaCasa = findViewById(R.id.idBtnCasaPedido);
+        btnDeCasa = findViewById(R.id.idBtnOpPediCasa);
         btnEligeIngredientes = findViewById(R.id.idBtnEligeIngredientes);
         btnFavoritaGuiOpcionesPedido = findViewById(R.id.idBtnFavoritaPedido);
 
+        btnDeCasa.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                getToast("De la casa Ok!!");
+                /*Intent intent = new Intent(getApplicationContext(), GUI_deLaCasa.class);
+                startActivity(intent);*/
+            }
+        });
+
     }
 
-    // Evento Btn DE LA CASA
-    public void onClickDeCasa(View v)
+
+    public void getToast(String msg)
     {
-        Intent intent = new Intent(getApplicationContext(), GUI_deLaCasa.class);
-        startActivity(intent);
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

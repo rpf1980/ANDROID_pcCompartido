@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".GUI_OPCIONES_PEDIDO">
 
-    <Button
-        android:id="@+id/idBtnCasaPedido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:onClick="onClickDeCasa"
-        android:text="@string/strBtnDeLaCasa"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -32,11 +21,11 @@
         android:id="@+id/idBtnEligeIngredientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="54dp"
         android:text="@string/strBtnEligeIngredientes"
-        app:layout_constraintEnd_toEndOf="@+id/idBtnCasaPedido"
-        app:layout_constraintStart_toStartOf="@+id/idBtnCasaPedido"
-        app:layout_constraintTop_toBottomOf="@+id/idBtnCasaPedido" />
+        app:layout_constraintEnd_toEndOf="@+id/idBtnOpPediCasa"
+        app:layout_constraintStart_toStartOf="@+id/idBtnOpPediCasa"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnOpPediCasa" />
 
     <Button
         android:id="@+id/idBtnFavoritaPedido"
@@ -47,4 +36,14 @@
         app:layout_constraintEnd_toEndOf="@+id/idBtnEligeIngredientes"
         app:layout_constraintStart_toStartOf="@+id/idBtnEligeIngredientes"
         app:layout_constraintTop_toBottomOf="@+id/idBtnEligeIngredientes" />
+
+    <Button
+        android:id="@+id/idBtnOpPediCasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:text="@string/strBtnDeLaCasa"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

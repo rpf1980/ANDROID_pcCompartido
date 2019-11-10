@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Adaptador extends BaseAdapter
@@ -18,7 +19,7 @@ public class Adaptador extends BaseAdapter
     public Adaptador(Context contexto, List<Datos> listaObjetos)
     {
         this.contexto = contexto;
-        ListaObjetos = listaObjetos;
+        this.ListaObjetos = listaObjetos;
     }
 
     @Override

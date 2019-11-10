@@ -37,4 +37,13 @@
     <string name="strTvCantidad">Cantidad</string>
     <string name="strBtnListo">listo !!!</string>
     <string name="strCheckMarcaFavorita">Marcar como favorita</string>
+    <!--GUI PIZZAS AL GUSTO-->
+    <string name="strTvPizzasGusto">PIZZAS AL GUSTO</string>
+    <string name="strIngredienteQueso">Queso</string>
+    <string name="strIngredienteJamon">Jamón</string>
+    <string name="strIngredienteSalchicha">Salchicha</string>
+    <string name="strIngredienteYork">York</string>
+    <string name="strIngredienteAtun">Atún</string>
+    <string name="strIngredienteOliva">Oliva</string>
+    <string name="strIngredienteBacon">Bacon</string>
 </resources>

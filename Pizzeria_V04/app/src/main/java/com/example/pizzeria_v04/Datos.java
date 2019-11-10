@@ -15,6 +15,8 @@ public class Datos implements Serializable
         Imagen = imagen;
     }
 
+    public Datos(){}
+
     private String Detalle;
 
 
