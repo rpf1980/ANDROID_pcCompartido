@@ -27,4 +27,14 @@
     <string name="strBtnDeLaCasa">de la casa...</string>
     <string name="strBtnEligeIngredientes">elige tus ingredientes...</string>
     <string name="strBtnFavorita">favorita</string>
+    <!--GUI DE LA CASA-->
+    <string name="strTvGuiDeLaCasa">PIZZAS DE LA CASA</string>
+    <!--GUI DETALLE PIZZA DE LA CASA-->
+    <string name="strTvDetalleDeLaCasa">ESPECIALIDAD DE LA CASA</string>
+    <string name="strCheckMini">Pequeña</string>
+    <string name="strCheckMiddle">Mediana</string>
+    <string name="strCheckBig">Grande</string>
+    <string name="strTvCantidad">Cantidad</string>
+    <string name="strBtnListo">listo !!!</string>
+    <string name="strCheckMarcaFavorita">Marcar como favorita</string>
 </resources>

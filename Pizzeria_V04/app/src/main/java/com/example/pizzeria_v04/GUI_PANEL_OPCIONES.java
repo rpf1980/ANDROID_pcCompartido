@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class GUI_PANEL_OPCIONES extends AppCompatActivity
 {
@@ -46,9 +47,16 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
+                getToast("Entramos");
                 Intent i = new Intent(getApplicationContext(), GUI_OPCIONES_PEDIDO.class);
                 startActivity(i);
             }
         });
+    }
+
+    public void getToast(String msg)
+    {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }
