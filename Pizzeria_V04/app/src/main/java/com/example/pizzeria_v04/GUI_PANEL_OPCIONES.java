@@ -46,7 +46,8 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
+                Intent i = new Intent(getApplicationContext(), GUI_OPCIONES_PEDIDO.class);
+                startActivity(i);
             }
         });
     }
