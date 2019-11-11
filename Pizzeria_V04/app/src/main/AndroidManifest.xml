@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GUI_PizzaAlGusto"></activity>
+        <activity android:name=".GUI_DetallePizzaGusto"></activity>
+        <activity android:name=".GUI_PizzaAlGusto" />
         <activity android:name=".GUI_DetallePizzaCasa" />
         <activity android:name=".GUI_deLaCasa" />
         <activity android:name=".GUI_OPCIONES_PEDIDO" />

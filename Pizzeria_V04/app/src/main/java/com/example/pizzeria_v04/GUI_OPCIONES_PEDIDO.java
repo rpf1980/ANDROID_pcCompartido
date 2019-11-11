@@ -32,8 +32,8 @@ public class GUI_OPCIONES_PEDIDO extends AppCompatActivity
             {
 
                 getToast("De la casa Ok!!");
-                /*Intent intent = new Intent(getApplicationContext(), GUI_deLaCasa.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(getApplicationContext(), GUI_deLaCasa.class);
+                startActivity(intent);
             }
         });
 

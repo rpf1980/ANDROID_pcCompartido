@@ -3,6 +3,8 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ public class GUI_deLaCasa extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui_de_la_casa);
 
-        listaDatos = findViewById(R.id.lstDatos);
+        /*listaDatos = findViewById(R.id.lstDatos);
 
         // Lista de Objetos Datos
         Lista = new ArrayList<Datos>();
@@ -30,6 +32,18 @@ public class GUI_deLaCasa extends AppCompatActivity
 
         Adaptador miadaptador = new Adaptador(getApplicationContext(), Lista);
         listaDatos.setAdapter(miadaptador);
+
+        listaDatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //Obj tendrá todoel objeto en la posición indicada
+                Datos obj = (Datos) parent.getItemAtPosition(position);
+
+                //Vamos a otra Actividad para mostrar el detalle
+
+            }
+        });*/
 
     }
 }
