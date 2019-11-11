@@ -1,6 +1,8 @@
 package com.example.pizzeria_v04;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +13,9 @@ import java.util.ArrayList;
 
 public class GUI_deLaCasa extends AppCompatActivity
 {
-    ListView listaDatos;
-    ArrayList<Datos> Lista;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,30 +23,25 @@ public class GUI_deLaCasa extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui_de_la_casa);
 
-        /*listaDatos = findViewById(R.id.lstDatos);
+        // Referenciamos al RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        // Mejoramos rendimiento con esta configuración
+        mRecyclerView.setHasFixedSize(true);
+        // Creamos un LinearLayoutManager para gestionar el item.xml creado antes
+        mLayoutManager = new LinearLayoutManager(this);
+        // Lo asociamos al RecyclerView
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // Lista de Objetos Datos
-        Lista = new ArrayList<Datos>();
+        ArrayList<Datos> arrayItems = new ArrayList<Datos>();
 
-        // Cargar datos a la lista
-        Lista.add(new Datos(1, "Boloñesa", "Pizza extra de mozzarella", R.drawable.img1));
-        Lista.add(new Datos(2, "Vegetariana", "Ideal para veganos", R.drawable.img2));
-        Lista.add(new Datos(3, "Barbacoa", "Para los amantes del ketchup", R.drawable.img3));
+        // Vamos a rellenar la lista
+        arrayItems.add(new Datos(1,"Boloñesa", "Mejor de la casa", R.drawable.img1));
+        arrayItems.add(new Datos(2, "Vegetariana", "Mejor de la casa", R.drawable.img2));
+        arrayItems.add(new Datos(3,"Kebab", "Mejor de la casa", R.drawable.img3));
 
-        Adaptador miadaptador = new Adaptador(getApplicationContext(), Lista);
-        listaDatos.setAdapter(miadaptador);
+        mAdapter = new DatosAdapter(arrayItems, getApplicationContext());
 
-        listaDatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                //Obj tendrá todoel objeto en la posición indicada
-                Datos obj = (Datos) parent.getItemAtPosition(position);
-
-                //Vamos a otra Actividad para mostrar el detalle
-
-            }
-        });*/
-
+        // Asociamos el adaptador al recyclerview
+        mRecyclerView.setAdapter(mAdapter);
     }
 }
