@@ -52,6 +52,17 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
                 startActivity(i);
             }
         });
+
+        // Btn CONFIGURACIÓN
+        btnConfig.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void getToast(String msg)
