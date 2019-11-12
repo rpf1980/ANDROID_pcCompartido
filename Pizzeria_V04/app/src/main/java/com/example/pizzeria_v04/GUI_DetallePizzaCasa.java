@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,6 +16,9 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
 {
     ImageView img;
     Button btnDetallePizzaCasa;
+    Button btnSuma, btnResta;
+    TextView tvContador;
+    int contador = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,7 +28,11 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
 
         img = findViewById(R.id.idFotoDetalleCasa);
         btnDetallePizzaCasa = findViewById(R.id.idBtnDetalleCasa);
+        btnSuma = findViewById(R.id.idBtnSumaDetallePizzaCasa);
+        btnResta = findViewById(R.id.idBtnRestaDetallePizzaCasa);
+        tvContador = findViewById(R.id.idTvContador);
 
+        // Evento para pasar a la siguiente VISTA
         btnDetallePizzaCasa.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -32,6 +40,32 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
             {
                 Intent i = new Intent(getApplicationContext(), GUI_PizzaEnCamino.class);
                 startActivity(i);
+            }
+        });
+
+        // Btn SUMA
+        btnSuma.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                contador = Integer.parseInt(tvContador.getText().toString());
+                contador += 1;
+                tvContador.setText(String.valueOf(contador));
+            }
+        });
+
+        btnResta.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                contador = Integer.parseInt(tvContador.getText().toString());
+                if(contador > 0)
+                {
+                    contador -= 1;
+                }
+                tvContador.setText(String.valueOf(contador));
             }
         });
 

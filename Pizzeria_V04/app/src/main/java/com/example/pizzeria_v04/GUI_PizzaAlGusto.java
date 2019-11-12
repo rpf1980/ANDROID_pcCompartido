@@ -16,6 +16,7 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
     CheckBox checkMiniGusto, checkMiddleGusto, checkBigGusto;
     CheckBox checkQueso, checkJamon, checkSalchicha, checkYork, checkAtun, checkOliva, checkBacon;
     Button btnListoGusto;
+    int contador = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,6 +39,33 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
         checkOliva = findViewById(R.id.idCheckOliva);
         checkBacon = findViewById(R.id.idCheckBacon);
         btnListoGusto = findViewById(R.id.idBtnLIstoGusto);
+
+        // Evento SUMA contador
+        arrowRight.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                contador = Integer.parseInt(tvContador.getText().toString());
+                contador += 1;
+                tvContador.setText(String.valueOf(contador));
+            }
+        });
+
+        // Evento RESTA contador
+        arrowLeft.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                contador = Integer.parseInt(tvContador.getText().toString());
+                if(contador > 0)
+                {
+                    contador -= 1;
+                }
+                tvContador.setText(String.valueOf(contador));
+            }
+        });
 
         // Evento Btn LISTO !!!
         btnListoGusto.setOnClickListener(new View.OnClickListener()

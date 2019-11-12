@@ -54,5 +54,6 @@
     <!--GUI CONFIG USER-->
     <string name="strTvConfigUser">CONFIGURACIÓN DEL USUARIO</string>
     <string name="strBtnConfiguracion">guardar</string>
+    <string name="strContador">0</string>
 
 </resources>

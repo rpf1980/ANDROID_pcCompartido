@@ -54,39 +54,25 @@
         app:layout_constraintStart_toEndOf="@+id/idCheckMini"
         app:layout_constraintTop_toTopOf="@+id/idCheckMini" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#00660707"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/idBtnRestaDetallePizzaCasa"
         android:layout_width="37dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="14dp"
         android:background="@drawable/arrowleft"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintBottom_toBottomOf="@+id/idTvContador"
+        app:layout_constraintEnd_toStartOf="@+id/idTvContador"
+        app:layout_constraintTop_toTopOf="@+id/idTvContador" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/idBtnSumaDetallePizzaCasa"
         android:layout_width="37dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="14dp"
         android:background="@drawable/arrowright"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintBottom_toBottomOf="@+id/idTvContador"
+        app:layout_constraintStart_toEndOf="@+id/idTvContador"
+        app:layout_constraintTop_toTopOf="@+id/idTvContador" />
 
     <ImageView
         android:id="@+id/idFotoDetalleCasa"
@@ -116,4 +102,16 @@
         android:text="@string/strCheckMarcaFavorita"
         app:layout_constraintStart_toStartOf="@+id/idFotoDetalleCasa"
         app:layout_constraintTop_toBottomOf="@+id/idFotoDetalleCasa" />
+
+    <TextView
+        android:id="@+id/idTvContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/strContador"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>
