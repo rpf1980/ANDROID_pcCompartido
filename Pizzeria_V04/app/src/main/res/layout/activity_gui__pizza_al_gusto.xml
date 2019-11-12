@@ -10,7 +10,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="40dp"
         android:text="@string/strTvPizzasGusto"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:text="@string/strCheckMini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strCheckMiddle"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckMinGusto"
         app:layout_constraintStart_toStartOf="@+id/idCheckMinGusto"
         app:layout_constraintTop_toBottomOf="@+id/idCheckMinGusto" />
 
@@ -43,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strCheckBig"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckMiddleGusto"
         app:layout_constraintStart_toStartOf="@+id/idCheckMiddleGusto"
         app:layout_constraintTop_toBottomOf="@+id/idCheckMiddleGusto" />
 
@@ -60,7 +58,7 @@
         android:id="@+id/idCheckQueso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="40dp"
         android:text="@string/strIngredienteQueso"
         app:layout_constraintStart_toStartOf="@+id/idCheckBigGusto"
         app:layout_constraintTop_toBottomOf="@+id/idCheckBigGusto" />
@@ -71,7 +69,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strIngredienteJamon"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckQueso"
         app:layout_constraintStart_toStartOf="@+id/idCheckQueso"
         app:layout_constraintTop_toBottomOf="@+id/idCheckQueso" />
 
@@ -81,7 +78,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strIngredienteSalchicha"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckJamon"
         app:layout_constraintStart_toStartOf="@+id/idCheckJamon"
         app:layout_constraintTop_toBottomOf="@+id/idCheckJamon" />
 
@@ -91,7 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strIngredienteYork"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckSalchicha"
         app:layout_constraintStart_toStartOf="@+id/idCheckSalchicha"
         app:layout_constraintTop_toBottomOf="@+id/idCheckSalchicha" />
 
@@ -99,18 +94,16 @@
         android:id="@+id/idCheckAtun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/strIngredienteAtun"
-        app:layout_constraintStart_toStartOf="@+id/idCheckYork"
-        app:layout_constraintTop_toBottomOf="@+id/idCheckYork" />
+        app:layout_constraintStart_toStartOf="@+id/idBtnLeftGusto"
+        app:layout_constraintTop_toTopOf="@+id/idCheckQueso" />
 
     <CheckBox
         android:id="@+id/idCheckOliva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/strIngredienteOliva"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckAtun"
         app:layout_constraintStart_toStartOf="@+id/idCheckAtun"
         app:layout_constraintTop_toBottomOf="@+id/idCheckAtun" />
 
@@ -120,7 +113,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/strIngredienteBacon"
-        app:layout_constraintEnd_toEndOf="@+id/idCheckOliva"
         app:layout_constraintStart_toStartOf="@+id/idCheckOliva"
         app:layout_constraintTop_toBottomOf="@+id/idCheckOliva" />
 
@@ -128,11 +120,11 @@
         android:id="@+id/idBtnLIstoGusto"
         android:layout_width="207dp"
         android:layout_height="41dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="35dp"
         android:text="@string/strBtnListo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idCheckBacon" />
+        app:layout_constraintTop_toBottomOf="@+id/idCheckPepperoni" />
 
     <TextView
         android:id="@+id/idTvContadorGusto"
@@ -165,5 +157,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/idTvContadorGusto"
         app:layout_constraintStart_toEndOf="@+id/idTvContadorGusto"
         app:layout_constraintTop_toTopOf="@+id/idTvContadorGusto" />
+
+    <CheckBox
+        android:id="@+id/idCheckPepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/strIngredientePepperoni"
+        app:layout_constraintStart_toStartOf="@+id/idCheckBacon"
+        app:layout_constraintTop_toBottomOf="@+id/idCheckBacon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

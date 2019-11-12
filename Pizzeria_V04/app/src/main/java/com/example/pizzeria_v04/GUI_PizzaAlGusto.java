@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -36,5 +37,16 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
         checkOliva = findViewById(R.id.idCheckOliva);
         checkBacon = findViewById(R.id.idCheckBacon);
         btnListoGusto = findViewById(R.id.idBtnLIstoGusto);
+
+        // Evento Btn LISTO !!!
+        btnListoGusto.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                GetToast.getInstance("Click en Listo !!!");
+            }
+        });
+
     }
 }

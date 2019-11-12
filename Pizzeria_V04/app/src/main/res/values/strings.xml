@@ -46,4 +46,5 @@
     <string name="strIngredienteAtun">Atún</string>
     <string name="strIngredienteOliva">Oliva</string>
     <string name="strIngredienteBacon">Bacon</string>
+    <string name="strIngredientePepperoni">Pepperoni</string>
 </resources>

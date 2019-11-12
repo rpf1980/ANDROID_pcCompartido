@@ -48,7 +48,6 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             public void onClick(View v)
             {
 
-                getToast("Entramos");
                 Intent i = new Intent(getApplicationContext(), GUI_OPCIONES_PEDIDO.class);
                 startActivity(i);
             }
