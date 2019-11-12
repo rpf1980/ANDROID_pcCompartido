@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GUI_ConfigUser">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/strTvConfigUser"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEdtConfigNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/strHintUsuarioLogin"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/idEdtConfigEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/strHintEmailRegistro"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtConfigNombre"
+        app:layout_constraintStart_toStartOf="@+id/idEdtConfigNombre"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtConfigNombre" />
+
+    <EditText
+        android:id="@+id/idEdtConfigPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/strHintPassLogin"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtConfigEmail"
+        app:layout_constraintStart_toStartOf="@+id/idEdtConfigEmail"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtConfigEmail" />
+
+    <Button
+        android:id="@+id/idBtnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/strBtnConfiguracion"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtConfigPass"
+        app:layout_constraintStart_toStartOf="@+id/idEdtConfigPass"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtConfigPass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,5 +51,8 @@
     <string name="strTvDetallePizzaGusto">DETALLES DE SU PIZZA AL GUSTO</string>
     <!--GUI REPARTO-->
     <string name="strTvReparto">Llegará en 20 minutos...</string>
+    <!--GUI CONFIG USER-->
+    <string name="strTvConfigUser">CONFIGURACIÓN DEL USUARIO</string>
+    <string name="strBtnConfiguracion">guardar</string>
 
 </resources>
