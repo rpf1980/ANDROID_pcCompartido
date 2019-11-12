@@ -2,7 +2,10 @@ package com.example.pizzeria_v04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -11,6 +14,7 @@ import java.util.ArrayList;
 public class GUI_DetallePizzaCasa extends AppCompatActivity
 {
     ImageView img;
+    Button btnDetallePizzaCasa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,6 +23,17 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
         setContentView(R.layout.activity_gui__detalle_pizza_casa);
 
         img = findViewById(R.id.idFotoDetalleCasa);
+        btnDetallePizzaCasa = findViewById(R.id.idBtnDetalleCasa);
+
+        btnDetallePizzaCasa.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent i = new Intent(getApplicationContext(), GUI_PizzaEnCamino.class);
+                startActivity(i);
+            }
+        });
 
         ArrayList<Datos> arrayItems = new ArrayList<Datos>();
 
