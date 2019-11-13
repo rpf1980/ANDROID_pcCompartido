@@ -2,6 +2,7 @@ package com.example.calculatorv2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Asociación de id's de los componentes
+        // Con esta línea evita que se gire a modo HORIZONTAL ( Landscape )
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // Asociación de id's de los componentes
 
         Button btnEqual = findViewById(R.id.idBtnEqual);
         btnEqual.setOnClickListener(this);
