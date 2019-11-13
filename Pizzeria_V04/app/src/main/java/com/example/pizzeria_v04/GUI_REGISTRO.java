@@ -34,6 +34,13 @@ public class GUI_REGISTRO extends AppCompatActivity
         edtPassRegistro = findViewById(R.id.idEdtPassRegistro);
         btnRegistro = findViewById(R.id.idBtnRegistro);
 
+        // Mandamos password a la GUI_ConfigUser
+        // En GUI_ConfigUser recibirá el pass y podrá acceder, mostrar y
+        // modificar los datos del usuario registrado
+        /*pass = edtPassRegistro.getText().toString();
+        Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
+        i.putExtra("password", pass);
+        startActivity(i);*/
 
         // Evento btn GUARDAR registro
         btnRegistro.setOnClickListener(new View.OnClickListener()
