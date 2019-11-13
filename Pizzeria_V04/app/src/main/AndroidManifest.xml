@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GUI_ConfigUser"></activity>
+        <activity android:name=".SplashScreen" android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GUI_ConfigUser" />
         <activity android:name=".GUI_PizzaEnCamino" />
         <activity android:name=".GUI_DetallePizzaGusto" />
         <activity android:name=".GUI_PizzaAlGusto" />
@@ -20,11 +27,7 @@
         <activity android:name=".GUI_REGISTRO" />
         <activity android:name=".GUI_LOGIN" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
