@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CalculatorV2</string>
+    <string name="str_btn_n0">0</string>
+    <string name="str_btn_n1">1</string>
+    <string name="str_btn_n2">2</string>
+    <string name="str_btn_n3">3</string>
+    <string name="str_btn_n4">4</string>
+    <string name="str_btn_n5">5</string>
+    <string name="str_btn_n6">6</string>
+    <string name="str_btn_n7">7</string>
+    <string name="str_btn_n8">8</string>
+    <string name="str_btn_n9">9</string>
+    <string name="str_btn_divide">/</string>
+    <string name="str_btn_multiply">X</string>
+    <string name="str_btn_subtract">-</string>
+    <string name="str_btn_add">+</string>
+    <string name="str_btn_del">C</string>
+    <string name="str_btn_point">.</string>
+    <string name="str_almunia">I.E.S Almunia</string>
+    <string name="str_equal">=</string>
+    <string name="str_tv_result"></string>
+    <string name="str_title_app">CALCULATOR</string>
+</resources>
