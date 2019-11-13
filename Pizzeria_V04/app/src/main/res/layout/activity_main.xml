@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pizza"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="16dp"
         android:text="@string/strTvInicio"
+        android:textColor="#030303"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:background="@drawable/style_btn_bottom"
         android:text="@string/strBtnInitGuiInicio"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -32,7 +38,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@drawable/style_btn_bottom"
         android:text="@string/strBtnRegisGuiInicio"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/idBtnInitGuiInicio"
         app:layout_constraintStart_toStartOf="@+id/idBtnInitGuiInicio"
         app:layout_constraintTop_toBottomOf="@+id/idBtnInitGuiInicio" />
