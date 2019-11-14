@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +25,8 @@ public class GUI_ConfigUser extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__config_user);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         edtUserConfig = findViewById(R.id.idEdtConfigNombre);
         edtEmailConfig = findViewById(R.id.idEdtConfigEmail);
         edtPassConfig = findViewById(R.id.idEdtConfigPass);
@@ -32,10 +35,10 @@ public class GUI_ConfigUser extends AppCompatActivity
         // Cargamos datos en los campos al inicio de APP ( datos del registro del usuario )
 
         // 1. Traemos nombre del usuario que inicia la app
-        Intent recibir = getIntent();
-        String dato = recibir.getStringExtra("password");
+        /*Intent recibir = getIntent();
+        String dato = recibir.getStringExtra("password");*/
 
-        getToast(dato.toString());
+        //getToast(dato.toString());
         // Btn GUARDAR cambios de configuración del usuario
 
     }

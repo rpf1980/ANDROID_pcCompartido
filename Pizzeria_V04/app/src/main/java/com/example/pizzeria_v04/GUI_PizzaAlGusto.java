@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,8 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__pizza_al_gusto);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Asociamos los id's
         tvContador = findViewById(R.id.idTvContadorGusto);

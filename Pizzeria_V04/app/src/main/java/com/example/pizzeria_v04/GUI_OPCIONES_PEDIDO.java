@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,8 @@ public class GUI_OPCIONES_PEDIDO extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__opciones__pedido);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         btnDeCasa = findViewById(R.id.idBtnOpPediCasa);
         btnEligeIngredientes = findViewById(R.id.idBtnEligeIngredientes);

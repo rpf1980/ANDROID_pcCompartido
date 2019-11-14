@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,8 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__panel__opciones);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Asociamos id's
         wifi = findViewById(R.id.idWifi);

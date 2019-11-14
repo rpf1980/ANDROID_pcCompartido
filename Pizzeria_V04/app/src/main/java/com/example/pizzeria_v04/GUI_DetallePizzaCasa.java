@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,8 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__detalle_pizza_casa);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         img = findViewById(R.id.idFotoDetalleCasa);
         btnDetallePizzaCasa = findViewById(R.id.idBtnDetalleCasa);
@@ -79,6 +82,6 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
         // Recuperamos el item clicado
         int value = getIntent().getExtras().getInt("idpizza");
         img.setImageResource(arrayItems.get(value-1).getImagen());
-        Toast.makeText(this, value+"", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, value+"", Toast.LENGTH_LONG).show();
     }
 }

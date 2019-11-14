@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -28,6 +29,8 @@ public class GUI_REGISTRO extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__registro);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         //Asociamos los id's de los componentes
         edtUsuRegistro = findViewById(R.id.idEdtUsuRegistro);
         edtEmailRegistro = findViewById(R.id.idEdtEmailRegistro);
@@ -49,9 +52,9 @@ public class GUI_REGISTRO extends AppCompatActivity
             public void onClick(View v)
             {
                 // Guardamos los datos de los campos en variables
-                usuario = edtUsuRegistro.getText().toString();
-                email = edtEmailRegistro.getText().toString();
-                pass = edtPassRegistro.getText().toString();
+                usuario = edtUsuRegistro.getText().toString().trim();
+                email = edtEmailRegistro.getText().toString().trim();
+                pass = edtPassRegistro.getText().toString().trim();
 
                 // Entero contador para controlar que el registro esté Ok
                 // Si todas las validaciones son correctas ( contador suma 3 )

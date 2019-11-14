@@ -19,13 +19,20 @@
         <activity android:name=".GUI_ConfigUser" />
         <activity android:name=".GUI_PizzaEnCamino" />
         <activity android:name=".GUI_DetallePizzaGusto" />
-        <activity android:name=".GUI_PizzaAlGusto" />
-        <activity android:name=".GUI_DetallePizzaCasa" />
-        <activity android:name=".GUI_deLaCasa" />
-        <activity android:name=".GUI_OPCIONES_PEDIDO" />
-        <activity android:name=".GUI_PANEL_OPCIONES" />
-        <activity android:name=".GUI_REGISTRO" />
-        <activity android:name=".GUI_LOGIN" />
+        <activity android:name=".GUI_PizzaAlGusto"
+                  android:parentActivityName=".GUI_OPCIONES_PEDIDO"/>
+        <activity android:name=".GUI_DetallePizzaCasa"
+                  android:parentActivityName=".GUI_deLaCasa"/>
+        <activity android:name=".GUI_deLaCasa"
+                  android:parentActivityName=".GUI_OPCIONES_PEDIDO"/>
+        <activity android:name=".GUI_OPCIONES_PEDIDO"
+                  android:parentActivityName=".GUI_PANEL_OPCIONES"/>
+        <activity android:name=".GUI_PANEL_OPCIONES"
+                  android:parentActivityName=".MainActivity"/>
+        <activity android:name=".GUI_REGISTRO"
+                  android:parentActivityName=".MainActivity"/>
+        <activity android:name=".GUI_LOGIN"
+                  android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
 
         </activity>

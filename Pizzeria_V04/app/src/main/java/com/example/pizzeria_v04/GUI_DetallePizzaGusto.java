@@ -3,6 +3,7 @@ package com.example.pizzeria_v04;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class GUI_DetallePizzaGusto extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__detalle_pizza_gusto);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         btnDetPizGusto = findViewById(R.id.idBtnDetallesPizzaGusto);
 
         btnDetPizGusto.setOnClickListener(new View.OnClickListener()
@@ -25,8 +28,6 @@ public class GUI_DetallePizzaGusto extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                getToast("Ok click");
-
                 Intent i = new Intent(getApplicationContext(), GUI_PizzaEnCamino.class);
                 startActivity(i);
             }

@@ -2,6 +2,7 @@ package com.example.pizzeria_v04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 public class GUI_PizzaEnCamino extends AppCompatActivity
@@ -12,5 +13,7 @@ public class GUI_PizzaEnCamino extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gui__pizza_en_camino);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }
