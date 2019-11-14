@@ -63,9 +63,14 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             {
 
                 // Accedemos al registro SharedPreferences que tenga
-                // su campo boleano a tru, así sabremos qué usuario es
+                // su campo boleano a true, así sabremos qué usuario es
                 // el que está activo
 
+                // Acceder a ficheros xml en SharedPreferences
+
+                // Recorrer con un bucle los xml
+
+                // Hacemos substring sobre los nombres de los ficheros ( substring hasta el punto )
 
                 Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
                 startActivity(i);
