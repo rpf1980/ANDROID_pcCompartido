@@ -50,7 +50,6 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
                 Intent i = new Intent(getApplicationContext(), GUI_OPCIONES_PEDIDO.class);
                 startActivity(i);
             }
@@ -62,6 +61,12 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
+                // Accedemos al registro SharedPreferences que tenga
+                // su campo boleano a tru, así sabremos qué usuario es
+                // el que está activo
+
+
                 Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
                 startActivity(i);
             }

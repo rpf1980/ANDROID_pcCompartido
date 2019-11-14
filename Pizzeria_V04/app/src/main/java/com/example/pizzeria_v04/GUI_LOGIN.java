@@ -52,6 +52,12 @@ public class GUI_LOGIN extends AppCompatActivity
                 String usu = sp.getString("usuario", "Error usuario");
                 String pass = sp.getString("pass", "Error contraseña");
 
+                // Este boleano nos llega a false desde el Registro ( SharedPreferences )
+                // y lo cambiamos a true para que así controlemos de alguna forma que el
+                // usuario está logeado.
+                boolean logeado = sp.getBoolean("logeado", false);
+                logeado = true;
+
                 // Comprobar que los datos estén en Registrados
                 if(usuario.equals(usu) && password.equals(pass))
                 {

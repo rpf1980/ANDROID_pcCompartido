@@ -22,6 +22,7 @@ public class GUI_REGISTRO extends AppCompatActivity
     Button btnRegistro;
 
     String usuario, email, pass;
+    boolean logeado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -70,6 +71,10 @@ public class GUI_REGISTRO extends AppCompatActivity
                     SharedPreferences.Editor editor = sp.edit();
 
                     editor.putString("usuario", usuario);
+
+                    // Editamos en sharedPreferences un boleano a false
+                    // para que controle el logeo del usuario
+                    editor.putBoolean("logeado", logeado);
 
                     if(validarEmail(email))
                     {
