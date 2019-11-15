@@ -51,6 +51,15 @@ public class GUI_OPCIONES_PEDIDO extends AppCompatActivity
             }
         });
 
+        btnFavoritaGuiOpcionesPedido.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent i = new Intent(getApplicationContext(), GUI_Favoritas.class);
+                startActivity(i);
+            }
+        });
     }
 
 

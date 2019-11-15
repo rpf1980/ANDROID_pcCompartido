@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1F5B84B"
+    android:background="@drawable/degrayellow"
     tools:context=".GUI_DetallePizzaGusto">
 
     <TextView
@@ -35,7 +35,8 @@
         android:layout_width="251dp"
         android:layout_height="42dp"
         android:layout_marginTop="8dp"
-        android:background="#2663BF"
+        android:background="@drawable/stylebutton03"
+        android:textSize="18sp"
         android:text="@string/strBtnListo"
         android:textColor="@color/cardview_light_background"
         android:textStyle="bold"
@@ -44,13 +45,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <CheckBox
-        android:id="@+id/idCheckMarcaFavDetallPizzGusto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/strCheckMarcaFavorita"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/idBtnDetallesPizzaGusto"
-        app:layout_constraintTop_toBottomOf="@+id/idBtnDetallesPizzaGusto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1F5B84B"
+    android:background="@drawable/degradado"
     tools:context=".GUI_PizzaAlGusto">
 
     <TextView
@@ -171,5 +171,14 @@
         android:text="@string/strIngredientePepperoni"
         app:layout_constraintStart_toStartOf="@+id/idCheckBacon"
         app:layout_constraintTop_toBottomOf="@+id/idCheckBacon" />
+
+    <CheckBox
+        android:id="@+id/idCheckFavoritaMarcas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/strCheckMarcaFavorita"
+        app:layout_constraintStart_toStartOf="@+id/idBtnLIstoGusto"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnLIstoGusto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

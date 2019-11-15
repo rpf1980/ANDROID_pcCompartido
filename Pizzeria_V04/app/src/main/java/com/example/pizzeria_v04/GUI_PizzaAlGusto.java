@@ -16,6 +16,7 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
     Button arrowLeft, arrowRight;
     CheckBox checkMiniGusto, checkMiddleGusto, checkBigGusto;
     CheckBox checkQueso, checkJamon, checkSalchicha, checkYork, checkAtun, checkOliva, checkBacon;
+    CheckBox checkFavorita;
     Button btnListoGusto;
     int contador = 0;
 
@@ -42,6 +43,7 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
         checkOliva = findViewById(R.id.idCheckOliva);
         checkBacon = findViewById(R.id.idCheckBacon);
         btnListoGusto = findViewById(R.id.idBtnLIstoGusto);
+        checkFavorita = findViewById(R.id.idCheckFavoritaMarcas);
 
         // Evento SUMA contador
         arrowRight.setOnClickListener(new View.OnClickListener()
@@ -76,6 +78,44 @@ public class GUI_PizzaAlGusto extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
+                if(checkFavorita.isChecked())
+                {
+                    String ingredientes = "";
+                    //checkQueso, checkJamon, checkSalchicha, checkYork, checkAtun, checkOliva, checkBacon;
+                    if(checkQueso.isChecked())
+                    {
+                        ingredientes += "Queso ";
+                    }
+                    if(checkJamon.isChecked())
+                    {
+                        ingredientes += "Jamón ";
+                    }
+                    if(checkSalchicha.isChecked())
+                    {
+                        ingredientes += "Salchicha ";
+                    }
+                    if(checkYork.isChecked())
+                    {
+                        ingredientes += "York ";
+                    }
+                    if(checkAtun.isChecked())
+                    {
+                        ingredientes += "Atún ";
+                    }
+                    if(checkOliva.isChecked())
+                    {
+                        ingredientes += "Olivas ";
+                    }
+                    if(checkBacon.isChecked())
+                    {
+                        ingredientes += "Bacon ";
+                    }
+
+                    SingletonBD singleton = SingletonBD.getInstance();
+                    Datos pizza = new Datos(0, "Pizza al gusto", ingredientes, R.drawable.img1);
+                    singleton.AddPizza(pizza);
+                }
                 Intent i = new Intent(getApplicationContext(), GUI_DetallePizzaGusto.class);
                 startActivity(i);
             }

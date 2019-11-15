@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1F5B84B"
+    android:background="@drawable/degradado"
     tools:context=".GUI_DetallePizzaCasa">
 
     <TextView
@@ -90,7 +90,8 @@
         android:layout_width="283dp"
         android:layout_height="47dp"
         android:layout_marginTop="11dp"
-        android:background="#2663BF"
+        android:background="@drawable/stylebutton03"
+        android:textSize="18sp"
         android:text="@string/strBtnListo"
         android:textColor="@color/cardview_light_background"
         android:textStyle="bold"

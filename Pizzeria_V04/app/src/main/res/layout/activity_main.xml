@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pizza"
+    android:background="@drawable/imginit"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/idBtnInitGuiInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="117dp"
-        android:background="@drawable/style_btn_bottom"
+        android:layout_width="214dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="448dp"
         android:text="@string/strBtnInitGuiInicio"
         android:textColor="@color/cardview_light_background"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/idBtnRegisGuiInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/style_btn_bottom"
+        android:layout_width="203dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="25dp"
         android:text="@string/strBtnRegisGuiInicio"
         android:textColor="@color/cardview_light_background"
         android:textStyle="bold"

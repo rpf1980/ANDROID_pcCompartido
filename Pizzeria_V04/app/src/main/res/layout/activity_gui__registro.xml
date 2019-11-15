@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/degrapurple"
     tools:context=".GUI_REGISTRO">
 
     <TextView
@@ -57,7 +58,11 @@
         android:id="@+id/idBtnRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/stylebutton02"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:text="@string/strBtnRegistro"
         app:layout_constraintEnd_toEndOf="@+id/idEdtPassRegistro"
         app:layout_constraintStart_toStartOf="@+id/idEdtPassRegistro"

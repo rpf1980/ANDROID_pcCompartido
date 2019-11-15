@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1F5B84B"
+    android:background="@drawable/degrayellow"
     tools:context=".GUI_PANEL_OPCIONES">
 
     <Switch
