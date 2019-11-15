@@ -41,9 +41,14 @@ public class GUI_DetallePizzaCasa extends AppCompatActivity
         final ArrayList<Datos> arrayItems = new ArrayList<Datos>();
 
         // Vamos a rellenar la lista
-        arrayItems.add(new Datos(1,"Boloñesa", "Mejor de la casa", R.drawable.img1));
-        arrayItems.add(new Datos(2, "Vegetariana", "Mejor de la casa", R.drawable.img2));
-        arrayItems.add(new Datos(3,"Kebab", "Mejor de la casa", R.drawable.img3));
+        arrayItems.add(new Datos(1,"Carbonara", "Suave crema de nata", R.drawable.img1));
+        arrayItems.add(new Datos(2, "Vegetariana", "Para veganos en invierno", R.drawable.img4));
+        arrayItems.add(new Datos(3,"Kebab", "Sabores de oriente", R.drawable.pizza6));
+        arrayItems.add(new Datos(4,"4 estaciones", "Tierra y mar", R.drawable.pizza7));
+        arrayItems.add(new Datos(5,"Boloñesa", "Cremosa y suave", R.drawable.img2));
+        arrayItems.add(new Datos(6,"Mejicana", "Para los más atrevidos", R.drawable.img3));
+        arrayItems.add(new Datos(7,"Pepperoni", "Toma salami !!!", R.drawable.img5));
+        arrayItems.add(new Datos(8,"4 Quesos", "Intenso sabor...", R.drawable.pizza8));
 
         // Recuperamos el item clicado
         final int value = getIntent().getExtras().getInt("idpizza");

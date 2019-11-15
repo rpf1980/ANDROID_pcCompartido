@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ff5722</color>
-    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorPrimaryDark">#D80909</color>
     <color name="colorAccent">#F52641</color>
     <color name="colorOrange">#ff8a65</color>
-    <color name="colorPurple">#ab47bc</color>
+    <color name="colorPurple">#040404</color>
     <color name="colorPurpleLight">#f3e5f5</color>
 </resources>

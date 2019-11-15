@@ -51,7 +51,7 @@
         android:id="@+id/idBtnItemRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2663BF"
+        android:background="@drawable/stylebutton02"
         android:text="@string/strBtnListo"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
