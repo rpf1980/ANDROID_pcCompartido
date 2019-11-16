@@ -1,8 +1,6 @@
 ------------------------------------------------------------------
 # Línea 40 (GUI_REGISTRO)
- - Pretendo mandar la contraseña del usuario a la GUI_ConfigUser
-   con la intención de obtener un dato que relacione al usuario
-   y poder cargar en GUI_ConfigUser los datos del mismo para poder
-   ser modificados.
+ - La idea sería machacar el registro del usuario con los nuevos
+   datos.
 ------------------------------------------------------------------
 
