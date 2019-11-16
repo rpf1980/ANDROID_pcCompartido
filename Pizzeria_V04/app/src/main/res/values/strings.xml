@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pizzeria_V04</string>
+    <string name="app_name">Pizza Luigi</string>
     <!--INICIO-->
     <string name="strTvInicio">INICIO</string>
     <string name="strBtnInitGuiInicio">INICIAR SESIÓN</string>
