@@ -22,7 +22,6 @@ public class GUI_REGISTRO extends AppCompatActivity
     Button btnRegistro;
 
     String usuario, email, pass;
-    boolean logeado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,14 +37,6 @@ public class GUI_REGISTRO extends AppCompatActivity
         edtPassRegistro = findViewById(R.id.idEdtPassRegistro);
         btnRegistro = findViewById(R.id.idBtnRegistro);
 
-        // Mandamos password a la GUI_ConfigUser
-        // En GUI_ConfigUser recibirá el pass y podrá acceder, mostrar y
-        // modificar los datos del usuario registrado
-        /*pass = edtPassRegistro.getText().toString();
-        Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
-        i.putExtra("password", pass);
-        startActivity(i);*/
-
         // Evento btn GUARDAR registro
         btnRegistro.setOnClickListener(new View.OnClickListener()
         {
@@ -53,9 +44,9 @@ public class GUI_REGISTRO extends AppCompatActivity
             public void onClick(View v)
             {
                 // Guardamos los datos de los campos en variables
-                usuario = edtUsuRegistro.getText().toString().trim();
-                email = edtEmailRegistro.getText().toString().trim();
-                pass = edtPassRegistro.getText().toString().trim();
+                usuario = edtUsuRegistro.getText().toString().trim().toLowerCase();
+                email = edtEmailRegistro.getText().toString().trim().toLowerCase();
+                pass = edtPassRegistro.getText().toString().trim().toLowerCase();
 
                 // Entero contador para controlar que el registro esté Ok
                 // Si todas las validaciones son correctas ( contador suma 3 )
@@ -71,10 +62,6 @@ public class GUI_REGISTRO extends AppCompatActivity
                     SharedPreferences.Editor editor = sp.edit();
 
                     editor.putString("usuario", usuario);
-
-                    // Editamos en sharedPreferences un boleano a false
-                    // para que controle el logeo del usuario
-                    editor.putBoolean("logeado", logeado);
 
                     if(validarEmail(email))
                     {
@@ -102,9 +89,11 @@ public class GUI_REGISTRO extends AppCompatActivity
                     {
                         // Después del registro pasamos al PANEL DE OPCIONES
                         Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
+                        intent.putExtra("mandamosPassRegistro", pass); //Enviamos la contraseña al GUI_PANEL_OPCIONES
+                        intent.putExtra("nombreFicheroXML", usuario+"data.xml"); //Enviamos el nombre del fichero xml de SharedPreferences al GUI_PANEL_OPCIONES
                         startActivity(intent);
 
-                        getToast("Gracias por registrarte, "+usuario);
+                        getToast("Gracias por registrarte, "+usuario.toUpperCase());
                     }
 
                 }

@@ -18,6 +18,11 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
     Button btnPedido;
     Button btnConfig;
 
+    String contrasenia = "";
+    String contraDelLogin = "";
+    String nombFichRegistro = "";
+    String nomFichLogin = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -31,6 +36,22 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
         btnWeb = findViewById(R.id.idBtnWeb);
         btnPedido = findViewById(R.id.idBtnPedido);
         btnConfig = findViewById(R.id.idBtnConfig);
+
+        // Recibimos la CONTRASEÑA que se generó en GUI_REGISTRO
+        Intent intentpass = getIntent();
+        contrasenia = intentpass.getStringExtra("password");
+
+        // Recibimos la CONTRASEÑA que se escribe en GUI_LOGIN
+        Intent intentLoginPass = getIntent();
+        contraDelLogin = intentLoginPass.getStringExtra("mandamosPassLogin");
+
+        // Recibimos el del FICHERO XML desde GUI_REGISTRO
+        Intent intentFicheroReg = getIntent();
+        nombFichRegistro = intentFicheroReg.getStringExtra("nombreFicheroXML");
+
+        // Recibimos el nombre del FICHERO XML desde GUI_LOGIN
+        Intent intentNombFichLogin = getIntent();
+        nomFichLogin = intentNombFichLogin.getStringExtra("mandamosNombrFichDelLogin");
 
         // Btn WEB
         btnWeb.setOnClickListener(new View.OnClickListener()
@@ -61,18 +82,18 @@ public class GUI_PANEL_OPCIONES extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
-                // Accedemos al registro SharedPreferences que tenga
-                // su campo boleano a true, así sabremos qué usuario es
-                // el que está activo
-
-                // Acceder a ficheros xml en SharedPreferences
-
-                // Recorrer con un bucle los xml
-
-                // Hacemos substring sobre los nombres de los ficheros ( substring hasta el punto )
+                // Nos llega la contraseña del registro, o bien del login para pasarla
+                // a la GUI_ConfigUser
 
                 Intent i = new Intent(getApplicationContext(), GUI_ConfigUser.class);
+
+                // Mandamos la contraseña del campo fichero xml SharedPreferences desde LOGIN y desde REGISTRO
+                i.putExtra("mandamosPassRegistro", contrasenia);
+                i.putExtra("mandamosPassLogin", contraDelLogin);
+
+                // Mandamos el nombre del fichero xml SharedPreferences desde LOGIN y desde REGISTRO
+                i.putExtra("mandamosNomFicheroDesdeLogin", nomFichLogin);
+                i.putExtra("mandamosNomFichDesdeRegistro", nombFichRegistro);
                 startActivity(i);
             }
         });

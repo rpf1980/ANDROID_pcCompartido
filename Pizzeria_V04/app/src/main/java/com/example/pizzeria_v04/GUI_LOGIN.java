@@ -44,24 +44,20 @@ public class GUI_LOGIN extends AppCompatActivity
             {
 
                 // Guardamos los datos introducidos por el usuario
-                usuario = edtUsuLogin.getText().toString();
-                password = edtPassLogin.getText().toString();
+                usuario = edtUsuLogin.getText().toString().toLowerCase();
+                password = edtPassLogin.getText().toString().toLowerCase();
 
                 // Leemos datos del SharedPreferences
                 SharedPreferences sp = getSharedPreferences(usuario+"data", MODE_PRIVATE);
                 String usu = sp.getString("usuario", "Error usuario");
                 String pass = sp.getString("pass", "Error contraseña");
 
-                // Este boleano nos llega a false desde el Registro ( SharedPreferences )
-                // y lo cambiamos a true para que así controlemos de alguna forma que el
-                // usuario está logeado.
-                boolean logeado = sp.getBoolean("logeado", false);
-                logeado = true;
-
                 // Comprobar que los datos estén en Registrados
                 if(usuario.equals(usu) && password.equals(pass))
                 {
                     Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
+                    intent.putExtra("mandamosPassLogin", pass); //Enviamos contraseña al PANEL DE OPCIONES
+                    intent.putExtra("mandamosNombrFichDelLogin", usuario+"data.xml");
                     startActivity(intent);
                 }
                 else

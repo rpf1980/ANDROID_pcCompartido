@@ -53,6 +53,8 @@
     <string name="strTvReparto">Llegará en 20 minutos...</string>
     <!--GUI CONFIG USER-->
     <string name="strTvConfigUser">CONFIGURACIÓN DEL USUARIO</string>
+    <string name="strHintPassVieja">Escribe la vieja contraseña</string>
+    <string name="strTvNuevosDatos">Nuevos datos del registro</string>
     <string name="strBtnConfiguracion">guardar</string>
     <string name="strContador">0</string>
 
