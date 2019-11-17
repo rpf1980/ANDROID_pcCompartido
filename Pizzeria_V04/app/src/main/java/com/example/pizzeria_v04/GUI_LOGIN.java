@@ -45,8 +45,8 @@ public class GUI_LOGIN extends AppCompatActivity
             {
 
                 // Guardamos los datos introducidos por el usuario
-                usuario = edtUsuLogin.getText().toString().toLowerCase();
-                password = edtPassLogin.getText().toString().toLowerCase();
+                usuario = edtUsuLogin.getText().toString().toLowerCase().trim();
+                password = edtPassLogin.getText().toString().toLowerCase().trim();
 
                 // Leemos datos del SharedPreferences
                 SharedPreferences sp = getSharedPreferences(usuario+"data", MODE_PRIVATE);
