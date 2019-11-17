@@ -54,7 +54,7 @@
         android:background="@drawable/stylebutton02"
         android:fontFamily="@font/carter_one"
         android:text="@string/strBtnLogin"
-        android:textColor="@color/colorAccent"
+        android:textColor="#e040fb"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/idEdtPassLogin"

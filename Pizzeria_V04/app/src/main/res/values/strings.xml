@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pizza Luigi</string>
+    <string name="app_name">PIZZA LUIGI</string>
     <!--INICIO-->
     <string name="strTvInicio">INICIO</string>
     <string name="strBtnInitGuiInicio">INICIAR SESIÓN</string>
@@ -50,7 +50,7 @@
     <!--GUI DETALLES PIZZA AL GUSTO-->
     <string name="strTvDetallePizzaGusto">DETALLES DE SU PIZZA AL GUSTO</string>
     <!--GUI REPARTO-->
-    <string name="strTvReparto">¡ Llegará en 20 minutos aprox. !</string>
+    <string name="strTvReparto">¡Llegará en 20 minutos!</string>
     <!--GUI CONFIG USER-->
     <string name="strTvConfigUser">CONFIGURACIÓN DEL USUARIO</string>
     <string name="strHintPassVieja">Escribe la vieja contraseña</string>

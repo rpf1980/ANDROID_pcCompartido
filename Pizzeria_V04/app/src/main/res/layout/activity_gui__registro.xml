@@ -66,7 +66,7 @@
         android:background="@drawable/stylebutton02"
         android:fontFamily="@font/carter_one"
         android:text="@string/strBtnRegistro"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/purple"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/idEdtPassRegistro"

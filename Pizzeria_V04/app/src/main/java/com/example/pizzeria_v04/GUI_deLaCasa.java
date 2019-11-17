@@ -47,6 +47,15 @@ public class GUI_deLaCasa extends AppCompatActivity
         arrayItems.add(new Datos(7,"Pepperoni", "Toma salami !!!", R.drawable.img5));
         arrayItems.add(new Datos(8,"4 Quesos", "Intenso sabor...", R.drawable.pizza8));
 
+        arrayItems.add(new Datos(9,"Cerveza", "Cerveza mejicana", R.drawable.beer));
+        arrayItems.add(new Datos(10, "Cola", "Refresco cola", R.drawable.soda));
+        arrayItems.add(new Datos(11,"Agua", "Solo una cabra", R.drawable.water));
+        arrayItems.add(new Datos(12,"Doble Burger", "Para los más carnívoros", R.drawable.burger));
+        arrayItems.add(new Datos(13,"Cheese Burger", "Cremosa y carnosa", R.drawable.cheeseburger));
+        arrayItems.add(new Datos(14,"Muffin frambuesa", "Dulces del bosque", R.drawable.muffin));
+        arrayItems.add(new Datos(15,"Bizcocho Gallego", "Extremo dulzor", R.drawable.pancakes));
+        arrayItems.add(new Datos(16,"Ensalada", "Ligerito pero rico", R.drawable.salad));
+
         mAdapter = new DatosAdapter(arrayItems, getApplicationContext());
 
         // Asociamos el adaptador al recyclerview

@@ -6,4 +6,7 @@
     <color name="colorOrange">#ff8a65</color>
     <color name="colorPurple">#040404</color>
     <color name="colorPurpleLight">#f3e5f5</color>
+    <color name="colorTexto">#ffe082</color>
+    <color name="purple">#aa00ff</color>
+    <color name="redTexto">#c62828</color>
 </resources>
