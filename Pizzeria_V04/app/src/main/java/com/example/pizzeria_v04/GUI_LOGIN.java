@@ -21,6 +21,7 @@ public class GUI_LOGIN extends AppCompatActivity
     CheckBox checkLogin;
 
     String usuario, password;
+    boolean semaforo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -55,6 +56,8 @@ public class GUI_LOGIN extends AppCompatActivity
                 // Comprobar que los datos estén en Registrados
                 if(usuario.equals(usu) && password.equals(pass))
                 {
+                    semaforo = true;
+
                     Intent intent = new Intent(getApplicationContext(), GUI_PANEL_OPCIONES.class);
                     intent.putExtra("mandamosPassLogin", pass); //Enviamos contraseña al PANEL DE OPCIONES
                     intent.putExtra("mandamosNombrFichDelLogin", usuario+"data.xml");
@@ -64,6 +67,20 @@ public class GUI_LOGIN extends AppCompatActivity
                 {
                     getToast("Compruebe nombre y contraseña");
                 }
+
+                if(checkLogin.isChecked() && semaforo)
+                {
+                    //Registramos datos del LOGIN en SharedPreferences
+                    SharedPreferences dataLogin = getSharedPreferences(usuario+"login", MODE_PRIVATE);
+                    SharedPreferences.Editor wrieter = dataLogin.edit();
+
+                    wrieter.putString("userlogin", usuario);
+                    wrieter.putString("passlogin", password);
+                    wrieter.apply();
+
+                    getToast("¡ Credenciales guardados !");
+                }
+                semaforo = false;
             }
         });
     }
