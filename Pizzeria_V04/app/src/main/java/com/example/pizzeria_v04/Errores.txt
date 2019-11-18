@@ -1,6 +1,0 @@
-------------------------------------------------------------------
-# Línea 40 (GUI_REGISTRO)
- - La idea sería machacar el registro del usuario con los nuevos
-   datos.
-------------------------------------------------------------------
-
